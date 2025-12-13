@@ -1,0 +1,144 @@
+// ==============================
+// MÉTHODE : [Filtre]
+// ==============================
+// 1. MA DÉFINITION PERSONNELLE
+filter() c'est le "tri sélectif" des tableaux. Tu lui donnes une liste et une règle, elle te rend une nouvelle liste avec uniquement ce qui respecte la règle.
+
+// 2. PARAMÈTRES ACCEPTÉS
+- L'élément actuel du tableau (obligatoire à utiliser)
+- La position (index) de cet élément dans le tableau (optionnel)
+- Le tableau complet sur lequel on travaille (optionnel)// 3. CE QU’ELLE RETOURNE
+
+// Qu’est-ce qu’elle me donne en retour ?
+Un NOUVEAU tableau (jamais le même que l'original) Qui contient seulement les éléments où la condition est true
+Si aucun élément ne passe : un tableau vide.
+
+// Dans quelles situations cette méthode est utile ?
+- Chercher des éléments spécifiques dans une liste
+- Nettoyer des données (enlever les valeurs nulles, vides)
+- Sélectionner selon des critères (utilisateurs actifs, produits disponibles)
+- Valider des formulaires (garder seulement les champs valides)
+- Préparer des données pour l'affichage
+
+// 5. CE QU’ELLE NE FAIT PAS
+- OUBLIER LE RETURN DANS LA FONCTION
+- MODIFIER LE TABLEAU ORIGINAL EN CROYANT LE FILTRER
+- CONFONDRE FILTER ET MAP POUR TRANSFORMER
+- ATTENDRE UN SEUL ÉLÉMENT AU LIEU D'UN TABLEAU
+- UTILISER DES CONDITIONS TROMPEUSES QUI RETOURNENT DES NON-BOOLÉENS
+- FILTRER NULL/UNDEFINED SANS VÉRIFICATION PRÉALABLE
+- NÉGLIGER LA PERFORMANCE SUR TRÈS GROS TABLEAUX
+- ESSAYER DE FILTRER UN OBJET NON-ITÉRABLE
+
+
+
+// ==============================
+// MÉTHODE : [map]
+// ==============================
+
+// 1. MA DÉFINITION PERSONNELLE
+map est une méthode qui parcourt chaque élément d’un tableau et crée un nouveau tableau contenant les résultats de la fonction que tu appliques à chaque élément.
+Elle ne modifie pas le tableau original.
+
+// 2. PARAMÈTRES ACCEPTÉS
+- element : la valeur actuelle du tableau
+- index (optionnel) : la position de l’élément dans le tableau
+- array (optionnel) : le tableau complet sur lequel on fait le map
+
+// 3. CE QU’ELLE RETOURNE
+ Un nouveau tableau avec la même longueur que l’original chaque case contient la valeur transformée par ta fonction
+
+// 4. QUAND L’UTILISER ?
+- tu veux transformer un tableau en un autre tableau
+- tu veux appliquer une opération sur chaque élément
+- tu veux extraire une seule propriété d’une liste d’objets
+- tu veux formater les données (ex: mettre en majuscules, convertir, calculer…)
+
+// 5. CE QU’ELLE NE FAIT PAS
+- modifie le tableau original
+- filtrer
+- chercher un élément
+- faire des effets secondaires uniquement
+- modifier la taille du tableau
+
+
+
+
+// ==============================
+// MÉTHODE : [find]
+// ==============================
+
+// 1. MA DÉFINITION PERSONNELLE
+find parcourt un tableau et renvoie le premier élément qui respecte la condition que tu lui donnes.
+Si aucun élément ne correspond, elle renvoie undefined.
+
+// 2. PARAMÈTRES ACCEPTÉS
+- element → l’élément actuel du tableau
+- index (optionnel) → la position de l’élément
+- array (optionnel) → le tableau complet
+
+// 3. CE QU’ELLE RETOURNE
+- Le premier élément du tableau qui vérifie la condition
+- Sinon : undefined
+
+// 4. QUAND L’UTILISER ?
+- Chercher un élément précis dans un tableau
+- Récupérer un objet complet selon une propriété
+- Trouver la première occurrence correspondant à une condition
+- Arrêter la recherche dès que l’élément est trouvé
+
+// 5. CE QU’ELLE NE FAIT PAS
+- Ne retourne pas un tableau → contrairement à filter()
+- Ne trouve qu’un seul élément, même si plusieurs correspondent
+- Ne modifie pas le tableau original
+- n’est pas faite pour transformer des valeurs (ce n’est pas map())
+
+
+
+// ==============================
+// MÉTHODE : [forEach]
+// ==============================
+
+
+// 1. MA DÉFINITION PERSONNELLE
+forEach permet d’exécuter une fonction pour chaque élément d’un tableau, un par un.
+Elle sert surtout à faire des actions (afficher, modifier une variable, appeler une fonction), mais elle ne retourne rien.
+
+// 2. PARAMÈTRES ACCEPTÉS
+- element → la valeur actuelle
+- index (optionnel) → sa position dans le tableau
+- array (optionnel) → le tableau complet
+
+// 3. CE QU’ELLE RETOURNE
+// Qu’est-ce qu’elle me donne en retour ?
+
+
+// 4. QUAND L’UTILISER ?
+- Ne retourne rien => elle renvoie toujours undefined
+- Elle sert seulement à exécuter du code pour chaque élément.
+
+// 5. CE QU’ELLE NE FAIT PAS
+- Ne retourne jamais un nouveau tableau
+- Ne s’arrête pas en cours de route => contrairement à un for normal
+- On ne peut pas utiliser break ou continue dans un forEach()
+
+
+
+
+
+// ==============================
+// MÉTHODE : [findIndex]
+// ==============================
+
+
+// 1. MA DÉFINITION PERSONNELLE
+
+
+// 2. PARAMÈTRES ACCEPTÉS
+// Qu’est-ce que je peux mettre entre les parenthèses ?
+// 3. CE QU’ELLE RETOURNE
+// Qu’est-ce qu’elle me donne en retour ?
+// 4. QUAND L’UTILISER ?
+// Dans quelles situations cette méthode est utile ?
+// 5. CE QU’ELLE NE FAIT PAS
+// Les erreurs à éviter
