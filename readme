@@ -123,7 +123,24 @@ Elle sert surtout à faire des actions (afficher, modifier une variable, appeler
 - On ne peut pas utiliser break ou continue dans un forEach()
 
 
+// ==============================
+// MÉTHODE : [sort]
+// ==============================
 
+// ma définition personnelle
+// sort est une méthode qui permet de trier les éléments d’un tableau.
+
+// paramètres acceptés
+// une fonction de comparaison (optionnelle).
+
+// ce qu’elle retourne
+// le tableau trié.
+
+// quand l’utiliser ?
+// quand je veux organiser les éléments d’un tableau (ordre croissant ou décroissant).
+
+// ce qu’elle ne fait pas
+// elle ne crée pas un nouveau tableau, elle modifie le tableau original.
 
 
 // ==============================
@@ -142,3 +159,63 @@ Elle sert surtout à faire des actions (afficher, modifier une variable, appeler
 // Dans quelles situations cette méthode est utile ?
 // 5. CE QU’ELLE NE FAIT PAS
 // Les erreurs à éviter
+
+
+// les 3 visages de filter()
+
+- sur un tableau
+   array=nombres.filter(num=>num>10);
+
+   sur une string
+   phras = phrase.split(" ").filter(mot => mot.length > 3);
+
+- sur un objet
+  array = object.entries(utilisateurs).filter(([k, v]) => v === true);
+
+
+// .map()  les 3 visages
+
+-  sur un tableau
+  array = notes.map(note => note * 2);
+
+-  sur une string
+  phras = phrase.split(" ").map(mot => mot.toUpperCase());
+
+-  sur un objet
+  array = Object.entries(utilisateurs).map(([k, v]) => v.toUpperCase());
+  array = Object.values(utilisateurs).map(nom => nom.toUpperCase());
+
+
+// find() 3 visages
+
+- sur un tableau
+  let produit = produits.find(produit=>produit.prix>30);
+
+- sur une string
+  let alpha="javascript".split("").find(al=>al==="a");
+
+- sur un objet
+  let object=Object.entries(utilisateurs).find(([k,v])=>k==="user2");
+
+
+// sort() 3 visages
+- sur un tableau
+  produits.sort((a, b) => a.prix - b.prix);
+
+- sur une string
+  "dcba".split("").sort().join("");
+
+- sur un objet
+  object.entries(config).sort(([a], [b]) => a.localecompare(b));
+
+
+// les 3 visages de foreach()
+
+- sur un tableau
+  produits.foreach(p => console.log(p.nom));
+
+- sur une string
+  "bonjour".split("").foreach(l => console.log(l));
+
+- sur un objet
+  object.entries(config).foreach(([k, v]) => console.log(k, v));
